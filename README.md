@@ -23,7 +23,7 @@ The diagram below describes the inline hook interaction:
     * Click **Create Function** (let it automatically create an AMI role, or choose a pre-configured one)
     * In **Code entry type**, select **Upload a .zip file**
     * Upload the `.zip` file in the `/dist` folder generated in previous step.
-4. The Lambda uses Okta's jwt verifier library, which requires 2 variables passed into the Lambda as Environment Variables. Provide values for 2 environment variables (get these from your Okta configuration):
+4. The Lambda uses Okta's jwt verifier library, which requires 2 variables (passed into the Lambda as Environment Variables)... Provide values for 2 environment variables (get these from your Okta configuration):
 
 |Variable|Value|
 |--------|-----|
