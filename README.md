@@ -23,12 +23,12 @@ The diagram below describes the inline hook interaction:
     * Click **Create Function** (let it automatically create an AMI role, or choose a pre-configured one)
     * In **Code entry type**, select **Upload a .zip file**
     * Upload the `.zip` file in the `/dist` folder generated in previous step.
-4. The Lambda requires 2 environment variables. Get these from Okta:
+4. The Lambda uses Okta's jwt verifier library, which requires 2 variables passed into the Lambda as Environment Variables. Provide values for 2 environment variables (get these from your Okta configuration):
 
 |Variable|Value|
 |--------|-----|
-|ISSUER|Issuer String of the Authorization Server configured for API "B"|
-|AUDIENCE|"Audience" configured for the Authorization Server|
+|ISSUER|Issuer String of the Authorization Server configured for API "B" (API "A" makes a client_credentials request to this auth server)|
+|AUDIENCE|"Audience" configured in the Authorization Server|
 
 ## Create the Inline Hook service endpoint:
 Expose the Lambda Function using Amazon API Gateway:
