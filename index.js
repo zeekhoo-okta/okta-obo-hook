@@ -1,4 +1,3 @@
-const atob = require("atob");
 const OktaJwtVerifier = require('@okta/jwt-verifier');
 const queryString = require('query-string');
 
