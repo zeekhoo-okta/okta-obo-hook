@@ -27,8 +27,8 @@ The diagram below describes the inline hook interaction:
 
 |Variable|Value|
 |--------|-----|
-|ISSUER|Issuer String of the Authorization Server configured for API "B" (API "A" makes a client_credentials request to this auth server)|
-|AUDIENCE|"Audience" configured in the Authorization Server|
+|ISSUER|Issuer String of the Authorization Server configured for API "B" (API "A" makes a client_credentials request to this auth server) e.g. `https://example.okta.com/oauth2/default`|
+|AUDIENCE|"Audience" configured in the Authorization Server e.g. `api://default`|
 
 ## Create the Inline Hook service endpoint:
 Expose the Lambda Function using Amazon API Gateway:
